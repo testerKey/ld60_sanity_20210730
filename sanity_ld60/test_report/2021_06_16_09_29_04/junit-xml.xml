@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="5" hostname="E0004324DT" name="pytest" skipped="0" tests="22" time="1646.065" timestamp="2021-06-16T09:29:04.704382"><testcase classname="test_dir.test_a_kernel.TestKernel" file="test_dir\test_a_kernel.py" line="15" name="test_sanity_2" time="86.298"></testcase><testcase classname="test_dir.test_a_kernel.TestKernel" file="test_dir\test_a_kernel.py" line="22" name="test_sanity_8" time="16.849"></testcase><testcase classname="test_dir.test_c_videoplayback.TestVideoplayback" file="test_dir\test_c_videoplayback.py" line="11" name="test_sanity_15" time="124.906"></testcase><testcase classname="test_dir.test_c_videoplayback.TestVideoplayback" file="test_dir\test_c_videoplayback.py" line="19" name="test_sanity_16" time="116.458"></testcase><testcase classname="test_dir.test_c_videoplayback.TestVideoplayback" file="test_dir\test_c_videoplayback.py" line="25" name="test_sanity_17" time="113.962"></testcase><testcase classname="test_dir.test_c_videoplayback.TestVideoplayback" file="test_dir\test_c_videoplayback.py" line="31" name="test_sanity_18" time="114.914"></testcase><testcase classname="test_dir.test_c_videoplayback.TestVideoplayback" file="test_dir\test_c_videoplayback.py" line="37" name="test_sanity_19" time="102.224"></testcase><testcase classname="test_dir.test_c_videoplayback.TestVideoplayback" file="test_dir\test_c_videoplayback.py" line="43" name="test_sanity_20" time="115.329"></testcase><testcase classname="test_dir.test_c_videoplayback.TestVideoplayback" file="test_dir\test_c_videoplayback.py" line="49" name="test_sanity_21" time="130.929"></testcase><testcase classname="test_dir.test_c_videoplayback.TestVideoplayback" file="test_dir\test_c_videoplayback.py" line="55" name="test_sanity_22" time="130.989"></testcase><testcase classname="test_dir.test_d_musicplayback.TestMusicplayback" file="test_dir\test_d_musicplayback.py" line="16" name="test_sanity_23" time="85.634"></testcase><testcase classname="test_dir.test_d_musicplayback.TestMusicplayback" file="test_dir\test_d_musicplayback.py" line="24" name="test_sanity_24" time="80.292"></testcase><testcase classname="test_dir.test_d_musicplayback.TestMusicplayback" file="test_dir\test_d_musicplayback.py" line="30" name="test_sanity_25" time="66.943"></testcase><testcase classname="test_dir.test_d_musicplayback.TestMusicplayback" file="test_dir\test_d_musicplayback.py" line="36" name="test_sanity_26" time="66.632"></testcase><testcase classname="test_dir.test_d_musicplayback.TestMusicplayback" file="test_dir\test_d_musicplayback.py" line="42" name="test_sanity_27" time="38.765"></testcase><testcase classname="test_dir.test_d_musicplayback.TestMusicplayback" file="test_dir\test_d_musicplayback.py" line="48" name="test_sanity_28" time="66.750"></testcase><testcase classname="test_dir.test_d_musicplayback.TestMusicplayback" file="test_dir\test_d_musicplayback.py" line="54" name="test_sanity_29" time="62.699"></testcase><testcase classname="test_dir.test_e_pictureplayback.TestPictureplayback" file="..\sanity\test_dir\test_e_pictureplayback.py" line="15" name="test_sanity_30" time="36.771"><failure message="assert False is True">self = &lt;test_dir.test_e_pictureplayback.TestPictureplayback object at 0x0000018BC1D9D488&gt;
+driver = &lt;appium.webdriver.webdriver.WebDriver (session=&quot;22436514-3b4f-495f-a5d8-305de7e36655&quot;)&gt;
+
+    def test_sanity_30(self, driver):
+        page = PicturePage(driver)
+        driver.start_activity(&quot;com.eswin.tv.filebrowser&quot;, &quot;.home.HomePageActivity&quot;)
+        page.picture_page_switch(driver)
+        page.click_picture_30(driver)
+        path = &apos;D:\\Picture\\jpeg\\JPEG_1024x683.jpeg&apos;  # 参照图文件路径
+        result = page.compare_images(driver, path)  # 截图与参照图对比
+        page.playback_picture(driver)
+&gt;       assert result is True
+E       assert False is True
+
+D:\sanity\test_dir\test_e_pictureplayback.py:24: AssertionError</failure></testcase><testcase classname="test_dir.test_e_pictureplayback.TestPictureplayback" file="..\sanity\test_dir\test_e_pictureplayback.py" line="25" name="test_sanity_31_1" time="29.000"><failure message="assert False is True">self = &lt;test_dir.test_e_pictureplayback.TestPictureplayback object at 0x0000018BC1DD16C8&gt;
+driver = &lt;appium.webdriver.webdriver.WebDriver (session=&quot;22436514-3b4f-495f-a5d8-305de7e36655&quot;)&gt;
+
+    def test_sanity_31_1(self, driver):  # 测试第一个png图片
+        page = PicturePage(driver)
+        page.click_picture_31(driver)
+        page.click_picture_31_1(driver)
+        path = &apos;D:\\Picture\\png\\IMG_176x144_Overlay1.png&apos;
+        result = page.compare_images(driver, path)
+        page.playback_picture(driver)
+&gt;       assert result is True
+E       assert False is True
+
+D:\sanity\test_dir\test_e_pictureplayback.py:33: AssertionError</failure></testcase><testcase classname="test_dir.test_e_pictureplayback.TestPictureplayback" file="..\sanity\test_dir\test_e_pictureplayback.py" line="34" name="test_sanity_31_2" time="13.934"><failure message="assert False is True">self = &lt;test_dir.test_e_pictureplayback.TestPictureplayback object at 0x0000018BC1E2EAC8&gt;
+driver = &lt;appium.webdriver.webdriver.WebDriver (session=&quot;22436514-3b4f-495f-a5d8-305de7e36655&quot;)&gt;
+
+    def test_sanity_31_2(self, driver):
+        page = PicturePage(driver)
+        page.click_picture_31_2(driver)
+        path = &apos;D:\\Picture\\png\\IMG_176x144_Overlay2.png&apos;
+        result = page.compare_images(driver, path)
+        page.playback_picture(driver)
+&gt;       assert result is True
+E       assert False is True
+
+D:\sanity\test_dir\test_e_pictureplayback.py:41: AssertionError</failure></testcase><testcase classname="test_dir.test_e_pictureplayback.TestPictureplayback" file="..\sanity\test_dir\test_e_pictureplayback.py" line="42" name="test_sanity_31_3" time="14.190"><failure message="assert False is True">self = &lt;test_dir.test_e_pictureplayback.TestPictureplayback object at 0x0000018BC1E28A08&gt;
+driver = &lt;appium.webdriver.webdriver.WebDriver (session=&quot;22436514-3b4f-495f-a5d8-305de7e36655&quot;)&gt;
+
+    def test_sanity_31_3(self, driver):
+        page = PicturePage(driver)
+        page.click_picture_31_3(driver)
+        path = &apos;D:\\Picture\\png\\IMG_640x480.png&apos;
+        result = page.compare_images(driver, path)
+        print(result)
+        page.playback_picture(driver)
+&gt;       assert result is True
+E       assert False is True
+
+D:\sanity\test_dir\test_e_pictureplayback.py:50: AssertionError</failure></testcase><testcase classname="test_dir.test_e_pictureplayback.TestPictureplayback" file="..\sanity\test_dir\test_e_pictureplayback.py" line="51" name="test_sanity_31_4" time="14.994"><failure message="assert False is True">self = &lt;test_dir.test_e_pictureplayback.TestPictureplayback object at 0x0000018BC1DD1D88&gt;
+driver = &lt;appium.webdriver.webdriver.WebDriver (session=&quot;22436514-3b4f-495f-a5d8-305de7e36655&quot;)&gt;
+
+    def test_sanity_31_4(self, driver):
+        page = PicturePage(driver)
+        page.click_picture_31_4(driver)
+        path = &apos;D:\\Picture\\png\\IMG_640x480_Overlay1.png&apos;
+        result = page.compare_images(driver, path)
+        page.playback_picture(driver)
+&gt;       assert result is True
+E       assert False is True
+
+D:\sanity\test_dir\test_e_pictureplayback.py:58: AssertionError</failure></testcase></testsuite></testsuites>
